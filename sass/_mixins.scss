@@ -1,0 +1,65 @@
+// media query
+// 0-600px is for phones
+//600-900px is for tablets portrait
+//900-1200px is for tablet landscape
+//1200-1800px is for laptops 
+//1800px plus is for big desktop 
+
+// variables for media queries
+// breakpoint
+// phone
+// tab-port
+// tab-land
+// big-desk
+
+// 1rem = 16px
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media  only screen  and (max-width:37.5em) {  
+            //600px 
+            @content
+            
+        }
+    };
+
+    @if $breakpoint == tab-port{
+        @media only screen and (max-width:56.25em) {
+            //900px
+            @content
+        }
+
+    };
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width:75em){
+            //1200px
+            @content
+        }
+    };
+    @if $breakpoint == big-desk{
+        @media only screen  and (max-width:112.5em){
+             //1800px
+            @content
+        }
+    };
+   
+ 
+}
+
+@mixin clearfix {
+    &::after{
+        content:"";
+        display:table;
+        clear:both;
+        
+    }
+
+}
+
+@mixin centerContent{
+    position: absolute;
+    left: 9.5%;
+    top: 40%;
+    transform: translate(-9.5%,12%);
+    z-index: 1500;
+}

@@ -1,0 +1,68 @@
+.header{
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    transition: 650ms ease-in-out;
+    
+}
+
+.nav-brand{
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 3.5rem;
+    @include respond(tab-port){
+        margin-left: 0rem;
+    }
+}
+.nav-list{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-top: 2rem;
+    position: relative;
+    margin-right: 3.5rem;
+
+    @include respond(tab-port){
+        margin-right: 0rem; 
+    }
+
+    @include respond(tab-port){
+        display: block;
+        align-items: stretch;
+        background-color: rgba($brown-rgba,.9);
+        width: 50%;
+        height: 80vh !important;
+        transition: all 650ms ease-in-out;
+        padding-top: 5rem;
+
+    }
+
+    &__items{
+        // padding: 1.5rem;
+    }
+    &__link{
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1.5rem;
+
+        &:last-child{
+            margin-right: 1rem;
+        }
+
+        &:hover,
+        &:focus,
+        &.active{
+            background: $white;
+            border-radius: .3rem;
+            color: $black;
+            
+        }
+    }
+    
+}

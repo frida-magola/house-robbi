@@ -1,0 +1,85 @@
+.row{
+    width: $grid-width;
+    margin:0 auto;
+    // padding: 0 8rem;
+    
+    &:not(:last-child){
+        margin-bottom:$vertical-width;
+
+        @include respond(tab-port){
+            margin-bottom:$vertical-width-small;
+        }
+    }
+    @include respond(tab-port){
+        max-width: 50rem;
+        padding:0 3rem;
+    }
+
+    @include respond(phone){
+        max-width: 45rem;
+        padding:0 2rem;
+    }
+    @include clearfix;
+    [class^="col-"]{
+        float:left;
+        &:not(:last-child){
+            margin-right:$horizontal-width ;
+             @include respond(tab-port){
+                 margin-right: 0;
+                 margin-bottom: $vertical-width-small;
+             }
+
+             @include respond(phone){
+                margin-right: 0;
+                margin-bottom: 2rem !important;
+            }
+             
+        }
+        @include  respond(tab-port){
+            width: 100% !important;
+        }
+    }
+
+    
+}
+// 12 columns
+.col-1-of-1{
+    width: 100% !important;
+    // border: 1px solid;
+}
+
+// 6 columns
+.col-1-of-2{
+    width:calc((100% - #{$horizontal-width}) / 2);
+    // border: 1px solid;
+}
+
+// 3columns
+.col-1-of-3{
+  width:calc((100% - 2 * #{$horizontal-width}) / 3); 
+//   border: 1px solid;
+}
+
+// 2columns of 3columns
+.col-2-of-3{
+    width: calc(2 * ((100% - 2 * #{$horizontal-width}) / 3) + #{$horizontal-width});
+    // border: 1px solid;
+ }
+
+ // 4columns
+.col-1-of-4{
+    width:calc((100% - 3 * #{$horizontal-width}) / 4);  
+    // border: 1px solid;
+}
+
+// 2columns of 4columns
+.col-2-of-4{
+    width:calc(2 * ((100% - 3 * #{$horizontal-width}) / 4) + #{$horizontal-width});
+    // border: 1px solid;
+}
+
+// 3columns of 4columns
+.col-3-of-4{
+  width:calc(3 * ((100% - 3 * #{$horizontal-width}) / 4) + 2 * #{$horizontal-width});
+//   border: 1px solid;
+}

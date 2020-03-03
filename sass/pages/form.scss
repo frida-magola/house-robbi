@@ -1,0 +1,32 @@
+.form-controle{
+    border: .1rem solid rgba($brown-rgba,.4);
+
+   &:focus{
+        outline: none;
+        border: .1rem solid rgba($brown-rgba,.4);
+   }
+
+   ::-webkit-input-placeholder{
+       color: #ccc;
+   }
+    
+}
+input,textarea{
+    display: block;
+    width: 60%;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+.form-group{
+    label{
+        font-size: 1.4rem;
+        color: $white;
+
+    }
+    margin-bottom: 2rem;
+}

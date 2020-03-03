@@ -1,0 +1,32 @@
+.btn {
+    padding: 1rem .9rem;
+    background: $white;
+    border-radius: .6rem;
+    border: 0;
+    transition: all .3s ease;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $brown;
+        color: $white;
+    }
+
+}
+
+.btn-outline{
+    border: .1rem solid $brown !important;
+}
+.btn-info{
+    background-color: $brown;
+    backface-visibility: hidden;
+    
+    &:hover{
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.btn-submit-form{
+    outline: none;
+}

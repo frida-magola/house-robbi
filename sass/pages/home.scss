@@ -1,0 +1,148 @@
+
+//Slider section style
+.slider-section{
+    
+    &__container{
+        height: 80vh;
+        max-height: 80vh;
+        width: 100%;
+        position: relative;
+        
+        &_slider{
+            width: 100%;
+            height: inherit; 
+
+            .slick-carousel__item{
+                width: 100%;
+                height: 80vh;
+                position: relative;
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background-color: rgba($black,.8);
+                    background-blend-mode: multiply;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: 10;
+                    opacity: .5;
+                }
+
+                &_content{
+                    // padding-bottom: 4rem;
+                    @include centerContent;
+                    width: 40%;
+                    font-size: 1.7rem;
+                    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) ease;
+                    
+
+                    @include respond(tab-port){
+                        width: 90%;
+                        font-size: 1.5rem;
+                    }
+                    h1,p{
+                        color: $white;
+                        
+                    }
+                    p{
+                        margin-bottom: 1.5rem !important;
+                    } 
+                    a{
+                        padding: 1.5rem 2.5rem;
+                        font-size: 1.5rem;
+
+                        @include respond(tab-port){
+                            padding: 1rem 2rem;
+                        }
+                        
+                        &:not(:last-child){
+                            margin-right: 2rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+
+    
+}
+
+// About us style
+.about-section{
+    position: relative;
+
+    &__header{
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+
+        @include respond(tab-port){
+            width: 60%;
+        }
+
+        @include respond(phone){
+            width: 80%;
+        }
+
+        h1{
+            text-align: center;
+            padding-top: 1.5rem;
+
+            @include respond(tab-port){
+                font-size: 1.5rem;
+            }
+    
+            @include respond(phone){
+                width: 80%;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__content{
+        width: 50%;
+        font-size: 1.1rem;
+        @include respond(big-desk){
+            font-size: 1.2rem;
+        }
+        @include respond(tab-port){
+            font-size: 1rem;
+        }
+    }
+
+    @include clearfix;
+}
+
+// More content section style
+.more-content{
+    &__text{
+        font-size: 1.1rem;
+        @include respond(tab-port){
+            width: 90%;
+        }
+    }
+
+    
+}
+
+// Portfolio section style home page
+.portfolio-section{
+    &__content{
+        height: auto;
+        box-shadow: 10px 0px 0px rgba($brown, 0.8);
+        border: 1px solid rgba($brown, 0.8);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        font-size: 1.2rem;
+
+        @include respond(tab-port){
+            width: 90%;
+        }
+    }
+}
+
+
