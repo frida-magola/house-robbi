@@ -2,14 +2,14 @@
 .contact__content{
     position: relative;
     height: 80vh;
-    width: 80%;
+    width: 95%;
     color: $white;
 
     &_text{
         position: absolute;
-        left: 10%;
+        left: 50%;
         top: 45%;
-        transform: translate(-10%,30%);
+        transform: translate(-85%, 19%);
         z-index: 15;
         width: 60%; 
         font-size: 1.5rem; 
@@ -21,16 +21,40 @@
         width: 100%;
         transform: skewX(-25deg);
         color: $white;
-        left: 0;
+        left: -28%;
         top: 0;
         content: "";
         z-index: 1;
+        box-shadow: 0 2.5rem 4rem rgba($brown,.9);
     }
 }
 
 //contacts detaits numbers and emails
 .contact-content{
     font-size: 1.4rem;
+    background-color: $white-dark-lighter;
+    padding-top: 2rem;
+    // box-shadow: 0rem .5rem 2.5rem rgba(0,0,0,.4);
+    // margin-top: -5rem !important;
+    //     margin-bottom: 3.5rem !important;
+
+    &__details{
+        text-align: center;
+        margin-top: -5rem !important;
+        margin-bottom: 3.5rem !important;
+
+        i{
+            font-size: 4.5rem;
+            color: rgba($brown,.9);
+            text-align: center;
+        }
+        p{
+            a{
+                text-align: justify;
+            }
+        }
+    }
+
     .heading-h1{
         font-size: 2.5rem;
         color: $black;
@@ -70,4 +94,132 @@
         font-size: 1.5rem;
         color: $white;
     }
+}
+
+.team-section{
+    position: relative;
+
+    &__content{
+        height: 25rem;
+        background-color: $white-dark-lighter;
+        font-size: 1.3rem;
+        position: relative;
+
+        figure{
+           position: relative;
+           height: 60%;
+           width: inherit;
+           
+           figcaption h2{
+            width: 90%;
+            background-color: $black;
+            color: $white;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 1rem;
+            top: 12rem;
+            transform: translate(0rem, .5rem);
+            padding: 1rem;
+            z-index: 9999;
+            box-shadow: 0 -1.000001rem 0.198rem 0 rgba($brown,.9);
+            text-align: center;
+           }
+
+           figcaption p{
+            //    margin-top: 1rem;
+               padding-top: 2rem;
+               text-align: center;
+               font-size: 1.3rem;
+           }
+        }
+
+
+    }
+
+    .heading-h1{
+        position: relative;
+
+        &::before{
+            width: 4px;
+            height: 4rem;
+            content: "";
+            left: 20px;
+            top: 0;
+            color: rgba($brown,.9);
+        }
+    }
+}
+
+.heading-h1{
+    font-size: 3rem !important;
+    text-align: center;
+}
+
+// members
+.members-section{
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .member{
+        font-family: 'Varela Round', sans-serif;
+        text-align: center;
+        overflow: hidden;
+        perspective: 800px;
+        position: relative;
+    }
+    .member:before,
+    .member:after{
+        content: "";
+        background: rgba(255,255,255,0.9);
+        width: 44%;
+        height: 42%;
+        opacity: 0;
+        transform: translateY(-50%) rotateY(90deg);
+        transform-origin: right center;
+        transform-style: preserve-3d;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        z-index: 1;
+        transition: all 0.4s ease-out;
+    }
+    .member:after{
+        transform: translateY(-50%) rotateY(-90deg);
+        transform-origin: left center;
+        left: auto;
+        right: 7%;
+    }
+    .member:hover:before,
+    .member:hover:after{
+        opacity: 1;
+        transform: translateY(-50%) rotateY(0);
+    }
+    .member img{
+        width: 100%;
+        height: auto;
+        transition: all 0.4s ease;
+    }
+    .member:hover img{ filter: hue-rotate(100deg); }
+    .member .member-content{
+        color: $brown;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 2;
+        transition: all 0.4s;
+    }
+    .member:hover .member-content{ opacity: 1; }
+    .member .title{
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0 0 3px 0;
+        text-transform: uppercase;
+    }
+    .member .post{ font-size: 16px; }
+
 }

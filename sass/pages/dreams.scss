@@ -1,14 +1,14 @@
 .question__content{
     position: relative;
     height: 80vh;
-    width: 80%;
+    width: 95%;
     color: $white;
 
     &_text{
         position: absolute;
-        left: 25%;
+        left: 50%;
         top: 45%;
-        transform: translate(-10%,30%);
+        transform: translate(-85%, 19%);
         z-index: 15;
         width: 60%; 
         font-size: 1.5rem; 
@@ -20,10 +20,11 @@
         width: 100%;
         transform: skewX(25deg);
         color: $white;
-        left: 0;
+        left: -28%;
         top: 0;
         content: "";
         z-index: 1;
+        box-shadow: 0 2.5rem 4rem rgba($brown,.9);
     }
 }
 .question-form{
@@ -33,6 +34,132 @@
             input,textarea{
                 width: 100%;
             }
+        }
+    }
+}
+
+// list question style
+.transition{transition: all 0.25s ease-in-out;}
+
+.flipIn{animation: flipdown 0.5s ease both;}
+
+.thatching-questions{
+    h1{
+        // cursor: pointer;
+        @extend .flipIn;
+        font-size: 3.6rem;
+        line-height: 42px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        // text-transform: uppercase;
+    } 
+}
+
+.no-select{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
+    -khtml-user-select:none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.questions-container{
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+    .question-list{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        padding-bottom: .4rem;
+        padding-top: 1.8rem;
+        border-top: .1rem dotted rgba(220,231,235,1);
+        @extend .flipIn;
+
+        &:nth-of-type(1){animation-delay: .5s;}
+        &:nth-of-type(2){animation-delay: .75s;}
+        &:nth-of-type(3){animation-delay: 1.0s;}
+        &:last-of-type{padding-bottom: 0;}
+
+        i{
+            position: absolute;
+            transform: translate(-6px,0);
+            margin-top: 16px;
+            right: 0;
+
+            &::before,
+            &::after{
+                @extend .transition;
+                content: "";
+                position: absolute;
+                background-color: $brown;
+                width: 3px;
+                height: 9px;
+            }
+            &::before{
+                transform: translate(-2px,0) rotate(45deg);
+            }
+            &::after{
+                transform: translate(2px,0) rotate(-45deg);
+            }
+        }
+
+        input[type=checkbox]{
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+
+            &:checked{
+                &~.question-list__content{
+                    margin-top: 0;
+                    max-height: 0;
+                    opacity: 0;
+                    transform: translate(0,50%);
+                }
+                &~i{
+                    &::before{
+                        transform: translate(2px,0) rotate(45deg);
+                    }
+                    &::after{
+                        transform: translate(-2px,0) rotate(-45deg); 
+                    }
+                }
+            }
+        }
+
+        &__title{
+            cursor: pointer;
+            @extend .no-select;
+            font-size: 2.6rem;
+            line-height: 34px;
+            letter-spacing: 1px;
+            font-weight: 100;
+            background-color: $white;
+            display: block;
+            margin: 0;
+            padding: 1rem;
+            padding-bottom: 0 !important;
+            text-transform: uppercase;  
+        }
+        &__content{
+            color: $black;
+            font-size: 1.7rem;
+            line-height: 26px;
+            letter-spacing: 1;
+            position: relative;
+            overflow: hidden;
+            max-height: 800px;
+            @extend .transition;
+            opacity: 1;
+            transform: translate(0,0);
+            margin-top: 14px;
+            padding: 1.5rem;
+            z-index: 2;
+
         }
     }
 }
