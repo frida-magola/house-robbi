@@ -5,9 +5,10 @@
     }
     &__main{
         padding: 5%;
-        flex:1 1 80%;
+        /* flex: 1 1 80%; */
         min-height: 100vh;
-        // border: 1px solid;
+        padding-bottom: 0;
+        padding-top: 0;
 
         .portfolio{
             display: grid;
@@ -19,35 +20,105 @@
 
         .portfolio-item{
             display: flex;
-            background: $brown;
+            // background: $brown;
             font-weight: 400;
             justify-content: center;
             align-items: center;
 
-            figure{
+            .animate{
                 height: 100%;
                 width: 100%;
                 color: $white;
                 position: relative;
                 transition: all 300ms ease-out;
-                cursor: pointer;
-                &::before{
-                    position: absolute;
-                    content: "";
-                    background-color: $brown;
-                    background-blend-mode: multiply;
-                    height: 100%;
-                    width: 100%;
-                    left: 0;
-                    top: 0;
-                    opacity: .2;
+                overflow: hidden;
+                z-index: 1;
+                transition: all 0.3s ease;
 
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.5s ease;
+                }
+
+                &::before{
+                    content: "";
+                    background: rgba(0,0,0,0.7);
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    transition: all 0.5s ease;
+                }
+                &:hover:before{ opacity: 1; }
+
+                &__heading{
+                    position: absolute;
+                    width: 100%;
+                    color: $white;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    background: rgba(0,0,0,0.7);
+                }
+
+                &__content{
+                    color: $white;
+                    width: 65%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 44%;
+                    left: 50%;
+                    z-index: 1;
+                    transition: all 0.3s ease 0.1s;
+
+                    &.medium-1{
+                        transform: translateY(-15%) translateX(-70%);
+                    }
+                    &.large{
+                        transform: translateY(70%) translateX(-70%);
+                    }
+
+                    &.medium-2{
+                        transform: translateY(-40%) translateX(-70%);
+                    }
+                      
+                    &.small{
+                        transform: translateY(-5%) translateX(-70%);
+                    }
                     
+                    &.tall{
+                        transform: translateY(50%) translateX(-70%);
+                    }
+                  
+
+                    &.wide{
+                        transform: translateY(50%) translateX(-70%);
+                    }
+
+                    h3{
+                        font-size: 1.6;
+                    } 
+                    p{
+                        font-size: 1.2rem;
+                        padding-bottom: 1rem;
+                    }
+                    .btn-gallery{
+                        padding: 0.5rem 1.2rem;
+                        background: $brown;
+                        margin-top: .5rem;
+                        color: $white;
+                        font-size: 1.3rem;
+                    }
                 }
-                &:hover &::before{
-                    background-blend-mode: none;
-                    transition: all ease-out 300ms;
-                }
+              
+            }
+
+            .animate:hover .animate__content{
+                opacity: 1;
+                filter: blur(0);
             }
 
             &.small{
@@ -77,45 +148,77 @@
             }
         }
     }
-
-//     &__main{
-//         display: grid;
-//         grid-gap: 10px;
-//         grid-template-columns: repeat(4, [col] 1fr );
-//         grid-template-rows: repeat(3, [row] auto );
-//     }
-
-//     &__port-img{
-
-//       &--1{
-//         grid-column: col / span 2;
-//         grid-row: row ;
-//         height: 350px;
-//     }
-//     &--2{
-//         grid-column: col 3 / span 2 ;
-//         grid-row: row ;
-//         height: 350px;
-//     }
-//     &--3{
-//         grid-column: col ;
-//         grid-row: row 2 ;
-//         height: 350px;
-//     }
-//     &--4{
-//         grid-column: col 2 / span 3 ;
-//         grid-row: row 2 ;
-//         height: 350px;
-//     }
-//    &--5{
-//         grid-column: col / span 4;
-//         grid-row: row 3;  
-//         height: 350px;
-//    }
-//     img{
-//         // height: 100%;
-//         // width: 100%;
-//       }
-//    }
-
 }
+.house-section{
+    &:not(:last-child){
+        margin-bottom: 4rem !important;
+    }
+    .house-development{
+        &__container{
+               /* height: 20rem; */
+                /* max-height: 20rem; */
+                width: 100%;
+                position: relative;
+                padding: 5rem;
+                padding-bottom: 0;
+                padding-top: 0;
+
+                h1{
+                    text-align: justify;
+
+                }
+
+            .house-carousel{
+               
+                &__item{
+                    overflow: hidden;
+                    height: 20rem;
+                    &:not(:last-child){
+                        margin-right: 0.5rem;
+                    }
+
+                    img{
+                        transform: scale(1) translate(1);
+                        transition: .3s ease-in-out;
+
+                        &:hover{
+                            background-color:rgba(0,0,0,1);
+                            -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+                }
+            }
+          }
+
+    }
+}
+
+//custom slick carousel
+.slick-prev, .slick-next{
+    background: $white !important;
+}
+.slick-next {
+    /* right: -3px; */
+    // right: 10px !important;
+    // top: -2rem !important;
+    &::before{
+        font-size: 1.5rem !important;
+        color: $brown !important;
+    }
+}
+.slick-prev{
+    // top: -2rem !important;
+    // left:95% !important;
+    // transform: translateY(50%) !important;
+
+    &::before{
+        font-size: 1.5rem !important;
+        color: $brown !important;
+    }
+}
+
+
+
+

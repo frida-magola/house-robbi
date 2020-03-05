@@ -1,0 +1,9 @@
+
+.icon-mail { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-phone { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-mobile { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-home { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-fax { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1ac;&nbsp;'); }
+.icon-tty { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1e4;&nbsp;'); }
+.icon-volume-control-phone { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2a0;&nbsp;'); }
+.icon-comment { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf4ac;&nbsp;'); }
