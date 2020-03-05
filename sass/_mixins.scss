@@ -7,6 +7,7 @@
 
 // variables for media queries
 // breakpoint
+// sm-phone
 // phone
 // tab-port
 // tab-land
@@ -14,6 +15,14 @@
 
 // 1rem = 16px
 @mixin respond($breakpoint){
+    @if $breakpoint == sm-phone {
+        @media  only screen  and (max-width:30em) { 
+            //480px 
+            @content
+            
+        }
+    };
+
     @if $breakpoint == phone {
         @media  only screen  and (max-width:37.5em) {  
             //600px 
@@ -58,8 +67,9 @@
 
 @mixin centerContent{
     position: absolute;
-    left: 9.5%;
-    top: 40%;
-    transform: translate(5%, 90%);
+    left: 10%;
+    top: 50%;
+    transform: translate(-10%, 19%);
     z-index: 1500;
+    transition: all .3s ease-in-out;
 }

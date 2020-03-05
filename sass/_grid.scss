@@ -10,13 +10,24 @@
             margin-bottom:$vertical-width-small;
         }
     }
+
+    @include respond(tab-land){
+        max-width: 55rem;
+        padding:0 3rem;
+    }
+
     @include respond(tab-port){
         max-width: 50rem;
         padding:0 3rem;
     }
 
     @include respond(phone){
-        max-width: 35rem;
+        max-width: 37rem;
+        padding:0 2rem;
+    }
+
+    @include respond(sm-phone){
+        max-width: 33rem;
         padding:0 2rem;
     }
     

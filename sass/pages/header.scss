@@ -13,8 +13,17 @@
     height: 100%;
     float: left;
     margin-left: 3.5rem;
+    
+    @include respond(tab-land){
+        display: block;
+        margin-left: 1.5rem;
+    }
     @include respond(tab-port){
-        margin-left: 0rem;
+        margin-left: 1.3rem;
+    }
+    @include respond(phone){
+        display: block;
+        margin-left: 1.2rem;
     }
 }
 
@@ -27,10 +36,18 @@
         display: none;
         
         transition: all .3s  ease-in-out;
+        @include respond(tab-land){
+            display: block;
+            transform: translateX(-1.2rem);
+        }
 
+        @include respond(tab-port){
+            display: block;
+            transform: translateX(-1.2rem);
+        }
         @include respond(phone){
             display: block;
-            transform: translateX(0);
+            transform: translateX(-1.2rem);
         }
 
         i{
@@ -42,6 +59,7 @@
     .close-toogle{
         float: right;
         display: none;
+        transform: translateX(-1.2rem);
         transition: all .3s  ease-in-out;
 
         i{
@@ -49,6 +67,10 @@
             color: $white;
         }
     }
+}
+
+.nav-mobile{
+    display: none;
 }
 
 .nav-list{
@@ -63,14 +85,18 @@
     margin-right: 3.5rem;
     transition: all 650ms ease-in-out;
 
-
+    @include respond(tab-land){
+        display: none;
+    }
     @include respond(tab-port){
         margin-right: 0rem; 
     }
 
     @include respond(tab-port){
         display: none;
-        align-items: stretch;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: rgba($brown-rgba,.9);
         width: 100%;
         height: 70vh !important;

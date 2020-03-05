@@ -38,4 +38,14 @@ input,textarea{
             margin-bottom: 0;
         } 
     }
+    @include respond(sm-phone){
+        :not(:last-child){
+            margin-bottom: 0;
+        } 
+    }
+    @include respond(sm-phone){
+        :not(:last-child){
+            margin-bottom: 0;
+        } 
+    }
 }

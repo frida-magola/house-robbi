@@ -2,6 +2,10 @@
     &_heading{
         font-size: 2.7rem;
         text-align: center;
+        @include respond(tab-port){
+            font-size: 2rem;
+            text-align: justify;
+        }
     }
     &__main{
         padding: 5%;
@@ -12,8 +16,13 @@
 
         @include respond(phone){
             min-height: 36vh;
+            padding-right: 8%;
         }
 
+        @include respond(sm-phone){
+            padding-right: 8%;
+            margin-left: -2rem;
+        }
 
         .portfolio{
             display: grid;
@@ -21,6 +30,10 @@
             grid-template-columns: repeat(5,1fr);
             grid-auto-rows: repeat(6,1fr);
             grid-gap: 2rem;
+
+            @include respond(phone){
+                grid-gap: 1rem;
+            }
         }
 
         .portfolio-item{
@@ -168,8 +181,14 @@
                 padding-bottom: 0;
                 padding-top: 0;
 
+                // @include respond(sm-phone){
+                //     padding: 0rem;
+                //     width: 90%;
+                // }
+
                 @include respond(phone){
                     padding: 0rem;
+                    width: 90%;
                 }
 
                 h1{
