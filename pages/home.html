@@ -8,7 +8,7 @@
                         <!-- <img src="" alt=""> -->
                         <div class="row">
                             <div class="col-1-of-3">
-                                <div class="slick-carousel__item_content">
+                                <div class="slick-carousel__item_content slide-content">
                                     <h1>Slide 1</h1>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum assumenda soluta quae officia aut neque! Ad velit quod ipsum voluptas quisquam, soluta repellendus quaerat dicta laboriosam dolores ipsa voluptatem.</p>
                                     <a href="http://" class="btn btn-info">More Info</a><a href="http://" class="btn btn-contact">Contact</a>
@@ -20,7 +20,7 @@
                     <div class="slick-carousel__item" data-bg-img="public/images/4.jpg">
                         <div class="row">
                             <div class="col-1-of-3">
-                                <div class="slick-carousel__item_content">
+                                <div class="slick-carousel__item_content slide-content">
                                     <h1>Slide 1</h1>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum assumenda soluta quae officia aut neque! Ad velit quod ipsum voluptas quisquam, soluta repellendus quaerat dicta laboriosam dolores ipsa voluptatem.</p>
                                     <a href="http://" class="btn btn-info">More Info</a><a href="http://" class="btn">Contact</a>
@@ -32,7 +32,7 @@
                     <div class="slick-carousel__item" data-bg-img="public/images/3.jpg">
                         <div class="row">
                             <div class="col-1-of-3">
-                                <div class="slick-carousel__item_content">
+                                <div class="slick-carousel__item_content slide-content">
                                     <h1>Slide 1</h1>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum assumenda soluta quae officia aut neque! Ad velit quod ipsum voluptas quisquam, soluta repellendus quaerat dicta laboriosam dolores ipsa voluptatem.</p>
                                     <a href="http://" class="btn btn-info">More Info</a><a href="http://" class="btn">Contact</a>
@@ -44,7 +44,7 @@
                     <div class="slick-carousel__item" data-bg-img="public/images/3.jpg">
                         <div class="row">
                             <div class="col-1-of-3">
-                                <div class="slick-carousel__item_content">
+                                <div class="slick-carousel__item_content slide-content">
                                     <h1>Slide 1</h1>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum assumenda soluta quae officia aut neque! Ad velit quod ipsum voluptas quisquam, soluta repellendus quaerat dicta laboriosam dolores ipsa voluptatem.</p>
                                     <a href="http://" class="btn btn-info">More Info</a><a href="http://" class="btn">Contact</a>
@@ -191,16 +191,51 @@
 
 <script>
 // <!-- carousel -->
-    $('.slick-carousel').slick({
-            dots: false,
-            autoplay:true,
-            autoplaySpeed:3000,
-            infinite:true,
-            adaptiveHeight: false,
-            pause:false,
-            fade: true,
-            cssEase: 'linear'
-    });
+$('.slick-carousel').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    fade: !0,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    arrows: false,
+    responsive: [
+    {
+    breakpoint: 1024,
+    settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true
+            }
+    },
+    {
+    breakpoint: 768,
+    settings: {
+    draggable: true,
+            }
+    },
+    {
+    breakpoint: 600,
+    settings: {
+    slidesToShow: 1,
+    draggable: true,
+    slidesToScroll: 1
+            }
+    },
+    {
+    breakpoint: 480,
+    settings: {
+    slidesToShow: 1,
+    draggable: true,
+    slidesToScroll: 1
+            }
+    }
+    ]
+});
    
 
     //data-bg-img

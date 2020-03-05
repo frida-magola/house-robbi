@@ -29,7 +29,11 @@
 }
 .question-form{
     &__container{
-
+        .question-list{
+            &__title{
+                font-size: 1.6rem;
+            }
+        }
         .form-group{
             input,textarea{
                 width: 100%;
@@ -64,6 +68,7 @@
     -ms-user-select: none;
     user-select: none;
 }
+
 .questions-container{
     perspective: 900;
     padding: 0;
@@ -134,7 +139,7 @@
         &__title{
             cursor: pointer;
             @extend .no-select;
-            font-size: 2.6rem;
+            font-size: 1.6rem;
             line-height: 34px;
             letter-spacing: 1px;
             font-weight: 100;
@@ -161,5 +166,71 @@
             z-index: 2;
 
         }
+    }
+}
+
+// //gallery section style
+.planning{
+    &__heading{
+      text-align: center;
+      font-size: 2.6rem;
+    }
+  
+    .reality-gallery{
+      &__bottom{
+        margin-bottom:0 !important;
+      }
+      &__content{
+        height: 40rem;
+        margin-bottom: 2rem !important;
+        box-shadow:0 0 2.5rem 1rem rgba($brown,.2) ;
+        cursor: pointer;
+  
+        &:hover figure img{
+           background-color:rgba(0,0,0,.7);
+          -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        &:hover figure h1{
+          transform: translate(-31%, -124%) skew(0deg);
+        }
+        figure{
+          position: relative;
+          width:100%;
+          height: 65%;
+          overflow: hidden;
+  
+           img {
+            transform: scale(1) translate(1);
+            transition: .3s ease-in-out;
+          }
+  
+          figcaption{
+           padding:1.5rem;
+           position: relative;
+           
+  
+            h1{
+              position: absolute;
+              color:$white;
+              background-color: rgba($black,.6);
+              transform: translate(-31%, -124%) skew(-25deg);
+              width:80%;
+              z-index:999;
+              padding:.7rem;
+              text-align: center;
+              left:36%;
+              top:10%;
+              transition:.3s ease-in-out ;
+           }
+           
+          }
+        }
+         p{
+           font-size:1.5rem;
+           padding: 1.5rem;
+         }      
+  
+      }
     }
 }
