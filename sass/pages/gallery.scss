@@ -168,6 +168,10 @@
                 padding-bottom: 0;
                 padding-top: 0;
 
+                @include respond(phone){
+                    padding: 0rem;
+                }
+
                 h1{
                     text-align: justify;
 
