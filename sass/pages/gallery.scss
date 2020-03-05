@@ -10,6 +10,11 @@
         padding-bottom: 0;
         padding-top: 0;
 
+        @include respond(phone){
+            min-height: 36vh;
+        }
+
+
         .portfolio{
             display: grid;
             height: 100%;

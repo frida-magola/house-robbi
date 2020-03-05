@@ -3432,6 +3432,11 @@ h1 {
   padding-bottom: 0;
   padding-top: 0;
 }
+@media only screen and (max-width: 37.5em) {
+  .portfolio-section__main {
+    min-height: 36vh;
+  }
+}
 .portfolio-section__main .portfolio {
   display: grid;
   height: 100%;
