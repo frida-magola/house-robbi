@@ -21,6 +21,9 @@ input,textarea{
         margin-bottom: 1rem;
         margin-top: 1rem;
     }
+    @include respond (tab-port) {
+       width: 100%;
+    }
 }
 .form-group{
     label{
