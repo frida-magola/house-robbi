@@ -48,6 +48,9 @@ $(document).ready(function(){
                 background:'rgb(180,177,144)',
                 
             })
+            // $('.team-section__content figure figcaption h2').css({
+            //     zIndex:'-1'
+            // })
             // $('.form-container').css({
             //     zIndex:'unset'
             // })
