@@ -3,7 +3,14 @@
 .icon-phone:before { content: '\e801'; } /* '' */
 .icon-mobile:before { content: '\e802'; } /* '' */
 .icon-home:before { content: '\e803'; } /* '' */
+.icon-cancel:before { content: '\e804'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-google:before { content: '\f1a0'; } /* '' */
 .icon-fax:before { content: '\f1ac'; } /* '' */
 .icon-tty:before { content: '\f1e4'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */
 .icon-volume-control-phone:before { content: '\f2a0'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
 .icon-comment:before { content: '\f4ac'; } /* '' */
