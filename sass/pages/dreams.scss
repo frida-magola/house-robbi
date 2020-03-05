@@ -4,6 +4,10 @@
     width: 95%;
     color: $white;
 
+    @include respond(tab-port){
+        width: 100%;
+    }
+
     &_text{
         position: absolute;
         left: 50%;
@@ -12,6 +16,13 @@
         z-index: 15;
         width: 60%; 
         font-size: 1.5rem; 
+
+        @include respond(tab-port){
+            font-size: 1.2rem;
+            width: 100%;
+            transform: translate(-40%, 90%);
+            // transform: translate(-85%, 50%);
+        }
     }
     &::after{
         position: absolute;
@@ -25,6 +36,14 @@
         content: "";
         z-index: 1;
         box-shadow: 0 2.5rem 4rem rgba($brown,.9);
+
+        @include respond(tab-port){
+            transform: skewX(0deg);
+            box-shadow: none;
+            left: 0;
+            background: rgba($brown,.9);
+            width:100%;
+        }
     }
 }
 .question-form{
@@ -73,6 +92,10 @@
     perspective: 900;
     padding: 0;
     margin: 0;
+    @include respond(tab-port){
+        margin-top: -3rem;
+    }
+
     .question-list{
         position: relative;
         padding: 0;
@@ -81,6 +104,11 @@
         padding-top: 1.8rem;
         border-top: .1rem dotted rgba(220,231,235,1);
         @extend .flipIn;
+
+        @include respond(tab-port){
+            padding-top: 1.5rem;
+            width: 100%;
+        }
 
         &:nth-of-type(1){animation-delay: .5s;}
         &:nth-of-type(2){animation-delay: .75s;}
@@ -92,6 +120,14 @@
             transform: translate(-6px,0);
             margin-top: 16px;
             right: 0;
+
+            @include respond(tab-port){
+                right: -4px;
+            }
+
+            @include respond(phone){
+                right: -4px;
+            }
 
             &::before,
             &::after{
@@ -140,7 +176,7 @@
             cursor: pointer;
             @extend .no-select;
             font-size: 1.2rem;
-            line-height: 34px;
+            line-height: 1.5;
             letter-spacing: 1px;
             font-weight: 100;
             background-color: $white;
@@ -149,9 +185,17 @@
             padding: 1rem;
             padding-bottom: 0 !important;
             text-transform: uppercase; 
+
+            @include respond(tab-port){
+                font-size: 1.1rem;
+                padding: .6rem;
+                text-transform: capitalize;
+            }
             
             @include respond(phone){
                 font-size: 1rem;
+                padding: .5rem;
+                text-transform: capitalize;
             }
         }
         &__content{
@@ -168,6 +212,9 @@
             margin-top: 14px;
             padding: 1.5rem;
             z-index: 2;
+            @include respond(tab-port){
+                font-size: 1.2rem;
+            }
 
         }
     }

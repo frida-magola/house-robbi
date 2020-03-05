@@ -5,6 +5,10 @@
     width: 95%;
     color: $white;
 
+    @include respond(tab-port){
+        width: 100%;
+    }
+
     &_text{
         position: absolute;
         left: 50%;
@@ -13,6 +17,13 @@
         z-index: 15;
         width: 60%; 
         font-size: 1.5rem; 
+
+        @include respond(tab-port){
+            font-size: 1.2rem;
+            width: 100%;
+            transform: translate(-40%, 90%);
+            // transform: translate(-85%, 50%);
+        }
     }
     &::after{
         position: absolute;
@@ -26,6 +37,14 @@
         content: "";
         z-index: 1;
         box-shadow: 0 2.5rem 4rem rgba($brown,.9);
+
+        @include respond(tab-port){
+            transform: skewX(0deg);
+            box-shadow: none;
+            left: 0;
+            background: rgba($brown,.9);
+            width:100%;
+        }
     }
 }
 
@@ -51,6 +70,11 @@
         p{
             a{
                 text-align: justify;
+
+                @include respond(tab-port){
+                    display: block;
+                    text-align: center;
+                }
             }
         }
     }
@@ -89,6 +113,7 @@
 
     @include respond(tab-port){
         margin: 0 auto;
+        width: 100%;
     }
     h2{
         font-size: 1.5rem;
@@ -151,75 +176,7 @@
 }
 
 .heading-h1{
-    font-size: 3rem !important;
+    font-size: 2rem !important;
     text-align: center;
 }
 
-// members
-.members-section{
-    h2{
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .member{
-        font-family: 'Varela Round', sans-serif;
-        text-align: center;
-        overflow: hidden;
-        perspective: 800px;
-        position: relative;
-    }
-    .member:before,
-    .member:after{
-        content: "";
-        background: rgba(255,255,255,0.9);
-        width: 44%;
-        height: 42%;
-        opacity: 0;
-        transform: translateY(-50%) rotateY(90deg);
-        transform-origin: right center;
-        transform-style: preserve-3d;
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        z-index: 1;
-        transition: all 0.4s ease-out;
-    }
-    .member:after{
-        transform: translateY(-50%) rotateY(-90deg);
-        transform-origin: left center;
-        left: auto;
-        right: 7%;
-    }
-    .member:hover:before,
-    .member:hover:after{
-        opacity: 1;
-        transform: translateY(-50%) rotateY(0);
-    }
-    .member img{
-        width: 100%;
-        height: auto;
-        transition: all 0.4s ease;
-    }
-    .member:hover img{ filter: hue-rotate(100deg); }
-    .member .member-content{
-        color: $brown;
-        width: 100%;
-        opacity: 0;
-        transform: translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 2;
-        transition: all 0.4s;
-    }
-    .member:hover .member-content{ opacity: 1; }
-    .member .title{
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin: 0 0 3px 0;
-        text-transform: uppercase;
-    }
-    .member .post{ font-size: 16px; }
-
-}

@@ -17,6 +17,10 @@ input,textarea{
     padding: 1.5rem;
     font-size: 1.3rem;
 
+    @include respond(tab-port){
+        width: 100%; 
+    }
+
     &:not(:last-child){
         margin-bottom: 1rem;
         margin-top: 1rem;
@@ -29,4 +33,9 @@ input,textarea{
 
     }
     margin-bottom: 2rem;
+    @include respond(tab-port){
+        :not(:last-child){
+            margin-bottom: 0;
+        } 
+    }
 }

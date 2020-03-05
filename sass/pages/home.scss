@@ -39,8 +39,9 @@
                     
 
                     @include respond(tab-port){
-                        width: 90%;
+                        width: 80%;
                         font-size: 1.5rem;
+                        transform: translate(5%, 90%);
                     }
                     h1,p{
                         color: $white;

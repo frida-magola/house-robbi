@@ -17,6 +17,40 @@
         margin-left: 0rem;
     }
 }
+
+.menu-toggle{
+    @include clearfix;
+    position: relative;
+    // span{display: block;}
+    .open-toogle{
+        float: right;
+        display: none;
+        
+        transition: all .3s  ease-in-out;
+
+        @include respond(phone){
+            display: block;
+            transform: translateX(0);
+        }
+
+        i{
+            font-size: 2.5rem;
+            color: $white;
+
+        }
+    }
+    .close-toogle{
+        float: right;
+        display: none;
+        transition: all .3s  ease-in-out;
+
+        i{
+            font-size: 2.5rem;
+            color: $white;
+        }
+    }
+}
+
 .nav-list{
     float: right;
     display: flex;
@@ -27,19 +61,21 @@
     padding-top: 2rem;
     position: relative;
     margin-right: 3.5rem;
+    transition: all 650ms ease-in-out;
+
 
     @include respond(tab-port){
         margin-right: 0rem; 
     }
 
     @include respond(tab-port){
-        display: block;
+        display: none;
         align-items: stretch;
         background-color: rgba($brown-rgba,.9);
-        width: 50%;
-        height: 80vh !important;
+        width: 100%;
+        height: 70vh !important;
         transition: all 650ms ease-in-out;
-        padding-top: 5rem;
+        padding-top: -1rem;
 
     }
 

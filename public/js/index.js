@@ -1,11 +1,3 @@
-// window.addEventListener('load', ()=>{
-//     if($('.slick-carousel').length > 0){
-//         console.log('slick');
-        
-//     }
-// })
-
-
 $(document).ready(function(){
     // include differents pages 
     // $('#footer').load("pages/includes/footer.html");
@@ -15,7 +7,7 @@ $(document).ready(function(){
     })
 
     //select all the links
-    var links = $('a')
+    var links = $('a');
 
     $(links).each(function(index, item){
         if($(item).attr('id') == 'home'){
@@ -48,12 +40,6 @@ $(document).ready(function(){
                 background:'rgb(180,177,144)',
                 
             })
-            // $('.team-section__content figure figcaption h2').css({
-            //     zIndex:'-1'
-            // })
-            // $('.form-container').css({
-            //     zIndex:'unset'
-            // })
         }else{
             $('.header').css({
                 background:'unset'
@@ -68,6 +54,44 @@ $(document).ready(function(){
         $('#current_year').innerHtml = currentYear
     }
     getCurrentYear()
+
+    // open menu toggle
+
+    $('.open-toogle').on('click',function(){
+        $('.nav-list').css({
+            display:'block'
+        })
+        $('.close-toogle').css({
+            display: 'block'
+        })
+        $(this).css({
+            display:'none'
+        })
+    })
+    $('.nav-list__items').click(function(){
+        $('.nav-list').css({
+            display:'none'
+        })
+        $('.open-toogle').css({
+            display: 'block'
+        })
+        $('.close-toogle').css({
+            display:'none'
+        })
+    })
+
+    $('.close-toogle').click(function(){
+        $('.nav-list').css({
+            display:'none'
+        })
+        $('.open-toogle').css({
+            display: 'block'
+        })
+        $(this).css({
+            display:'none'
+        })
+        
+    })
 
     
 })
