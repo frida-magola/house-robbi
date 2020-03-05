@@ -16,9 +16,10 @@
     }
 
     @include respond(phone){
-        max-width: 45rem;
+        max-width: 35rem;
         padding:0 2rem;
     }
+    
     @include clearfix;
     [class^="col-"]{
         float:left;
