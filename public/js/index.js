@@ -58,7 +58,7 @@ $(document).ready(function(){
     // open menu toggle
 
     $('.open-toogle').on('click',function(){
-        $('.nav-mobile').css({
+        $('.nav-list').css({
             display:'block'
         })
         $('.close-toogle').css({
@@ -69,7 +69,7 @@ $(document).ready(function(){
         })
     })
     $('.nav-list__items').click(function(){
-        $('.nav-mobile').css({
+        $('.nav-list').css({
             display:'none'
         })
         $('.open-toogle').css({
@@ -81,7 +81,7 @@ $(document).ready(function(){
     })
 
     $('.close-toogle').click(function(){
-        $('.nav-mobile').css({
+        $('.nav-list').css({
             display:'none'
         })
         $('.open-toogle').css({

@@ -3678,7 +3678,7 @@ h1 {
   position: absolute;
   left: 10%;
   top: 50%;
-  transform: translate(-10%, 19%);
+  transform: translate(-10%, -20%);
   z-index: 1500;
   transition: all 0.3s ease-in-out;
   width: 40%;
@@ -4410,14 +4410,10 @@ footer {
 .menu-toggle {
   position: relative;
 }
-.menu-toggle::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .menu-toggle .open-toogle {
   float: right;
   display: none;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 @media only screen and (max-width: 75em) {
@@ -4441,20 +4437,20 @@ footer {
 .menu-toggle .open-toogle i {
   font-size: 2.5rem;
   color: #fff;
+  cursor: pointer;
 }
 .menu-toggle .close-toogle {
-  float: right;
+  position: absolute;
+  left: 90%;
+  top: 0;
   display: none;
-  transform: translateX(-1.2rem);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .menu-toggle .close-toogle i {
   font-size: 2.5rem;
   color: #fff;
-}
-
-.nav-mobile {
-  display: none;
+  cursor: pointer;
 }
 
 .nav-list {
@@ -4472,15 +4468,15 @@ footer {
 @media only screen and (max-width: 75em) {
   .nav-list {
     display: none;
+    width: 100%;
+    height: 70vh !important;
+    margin-right: 0rem;
+    background-color: rgba(180, 177, 144, 0.9);
   }
 }
 @media only screen and (max-width: 56.25em) {
   .nav-list {
     margin-right: 0rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .nav-list {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -4492,10 +4488,23 @@ footer {
     padding-top: -1rem;
   }
 }
+@media only screen and (max-width: 75em) {
+  .nav-list__items {
+    text-align: center;
+    padding: 2.3rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .nav-list__items {
+    text-align: center;
+    padding: 2rem;
+  }
+}
 .nav-list__link {
   font-size: 1.5rem;
   color: #fff;
   padding: 1.5rem;
+  transition: all 0.3s ease;
 }
 .nav-list__link:last-child {
   margin-right: 1rem;
