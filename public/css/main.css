@@ -4447,6 +4447,16 @@ footer {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+@media only screen and (max-width: 75em) {
+  .menu-toggle .close-toogle {
+    left: 96%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .menu-toggle .close-toogle {
+    left: 87%;
+  }
+}
 .menu-toggle .close-toogle i {
   font-size: 2.5rem;
   color: #fff;
