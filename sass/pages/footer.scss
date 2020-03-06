@@ -11,6 +11,10 @@ footer{
     padding-top: 2rem;
     font-size: 1.3rem;
 
+    @include respond(tab-land){
+        width: 90%;
+    }
+
     @include respond(tab-port){
         width: 90%; 
     }
@@ -47,6 +51,10 @@ footer{
 .footer-logo{
     width: 60%;
     transform: translateY(5rem);
+
+    @include respond(tab-land){
+        width: 100%;
+    }
 
     @include respond(tab-port){
         width: 50%; 
@@ -101,6 +109,10 @@ footer{
             width: 60%;
             padding: 1.5rem;
             font-size: 1.3rem;
+
+            @include respond(tab-land){
+                width: 100%;
+            }
 
             @include respond(tab-port){
                 width: 90%;

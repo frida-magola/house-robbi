@@ -36,6 +36,9 @@
                     font-size: 1.7rem;
                     transition: all 650ms ease ;
                     
+                    @include respond(tab-land){
+                        transform: translate(0%, -35%); 
+                    }
 
                     @include respond(tab-port){
                         width: 75%;
@@ -80,6 +83,10 @@
         width: 30%;
         text-align: center;
         margin: 0 auto;
+
+        @include respond(tab-land){
+            width: 36%;
+        }
 
         @include respond(tab-port){
             width: 60%;

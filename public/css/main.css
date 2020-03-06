@@ -106,7 +106,7 @@ h1 {
 }
 @media only screen and (max-width: 75em) {
   .row {
-    max-width: 55rem;
+    max-width: 80rem;
     padding: 0 3rem;
   }
 }
@@ -3685,6 +3685,11 @@ h1 {
   font-size: 1.7rem;
   transition: all 650ms ease;
 }
+@media only screen and (max-width: 75em) {
+  .slider-section__container_slider .slick-carousel__item_content {
+    transform: translate(0%, -35%);
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .slider-section__container_slider .slick-carousel__item_content {
     width: 75%;
@@ -3719,6 +3724,11 @@ h1 {
   width: 30%;
   text-align: center;
   margin: 0 auto;
+}
+@media only screen and (max-width: 75em) {
+  .about-section__header {
+    width: 36%;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .about-section__header {
@@ -4217,6 +4227,11 @@ footer {
   padding-top: 2rem;
   font-size: 1.3rem;
 }
+@media only screen and (max-width: 75em) {
+  .footer-aboutus {
+    width: 90%;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .footer-aboutus {
     width: 90%;
@@ -4249,6 +4264,11 @@ footer {
 .footer-logo {
   width: 60%;
   transform: translateY(5rem);
+}
+@media only screen and (max-width: 75em) {
+  .footer-logo {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .footer-logo {
@@ -4298,6 +4318,11 @@ footer {
   width: 60%;
   padding: 1.5rem;
   font-size: 1.3rem;
+}
+@media only screen and (max-width: 75em) {
+  .footer-newsletter__form input {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .footer-newsletter__form input {
