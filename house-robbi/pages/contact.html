@@ -1,0 +1,179 @@
+<div class="contact">
+  <!-- image background -->
+  <section class="slider-section contact-bg">
+    <div class="slider-section__container">
+        <div class="slider-section__container_slider">
+            <div class="slick-carousel">
+                <div class="slick-carousel__item" data-bg-img="public/images/development2/LOrmarins06.jpg">
+                    <div class="row">
+                        <div class="col-3-of-4">
+                            <div class="contact__content">
+                                <div class="contact__content_text">
+                                  <h1>How can we help you to find a good house?</h1>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum assumenda soluta quae officia aut neque! Ad velit quod ipsum voluptas quisquam, soluta repellendus quaerat dicta laboriosam dolores ipsa voluptatem.</p>
+                                  <a href="#contactus" class="btn btn-info">Contact us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- contacts detaits numbers and emails -->
+  <section class="contact-content u-margin-bottom-big u-margin-top-big">
+    <div class="row">
+      <div class="col-1-of-1">
+        <h1 class="heading-h1">Contact Robbi Thatch</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-4">
+        <div class="contact-content__details u-margin-bottom-small">
+          <i class='icon-mail'></i>
+          <p>
+            <a href="mailto:rob@robbithatch.co.za">rob@robbithatch.co.za</a>
+            <a href="mailto:juandre@robbithatch.co.za">juandre@robbithatch.co.za</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-1-of-4">
+        <div class="contact-content__details">
+          <i class='icon-fax'></i>
+          <p class="icon-text">Fax: 086 589 4962</p>
+        </div>
+      </div>
+
+      <div class="col-1-of-4">
+        <div class="contact-content__details">
+          <i class='icon-phone'></i>
+          <p class="icon-text">0027 21 975 1535</p>
+        </div>
+      </div>
+
+      <div class="col-1-of-4">
+        <div class="contact-content__details">
+          <i class='icon-mobile'></i>
+          <p class="icon-text">Cell: 083 301 7029</p>
+        </div> 
+      </div>
+
+    </div>
+  </section>
+
+  <section class="team-section">
+    <!-- Team -->
+    <div class="row">
+      <div class="col-1-of-1">
+        <h1 class="heading-h1">Meet our team</h1>
+      </div>
+    </div>
+
+    <div class="row u-margin-bottom-big">
+      <div class="col-1-of-4">
+        <div class="team-section__content">
+          <figure>
+            <img src="public/images/dream/architect.jpg" alt="" srcset="">
+            <figcaption>
+              <h2>Name</h2>
+              <p><span>Engenier in building</span><br> <a href="">icon social</a></p>
+            </figcaption>
+          </figure>
+        </div> 
+      </div>
+      <div class="col-1-of-4">
+        <div class="team-section__content">
+          <figure>
+            <img src="public/images/dream/finished.jpg" alt="" srcset="">
+            <figcaption>
+              <h2>Name</h2>
+              <p><span>Achitect</span><br> <a href="">icon social</a></p>
+             
+            </figcaption>
+          </figure>
+        </div> 
+      </div>
+
+      <div class="col-1-of-4">
+        <div class="team-section__content">
+          <figure>
+            <img src="public/images/dream/halffin.jpg" alt="" srcset="">
+            <figcaption>
+              <h2>Name</h2>
+              <p><span>Achitect</span><br><a href="">icon social</a></p>
+              
+            </figcaption>
+          </figure>
+        </div> 
+      </div>
+
+      <div class="col-1-of-4">
+        <div class="team-section__content">
+          <figure>
+            <img src="public/images/dream/plan.jpg" alt="" srcset="">
+            <figcaption>
+              <h2>Name</h2>
+              <p>
+                <span>Achitect</span><br>
+                <a href="">icon social</a>
+              </p>
+              
+            </figcaption>
+          </figure>
+        </div> 
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- section contact form and map in background form display above -->
+  <section class="contact-map-form u-margin-bottom-big" data-bg-img="public/images/dream/plan.jpg" id="contactus">
+      <div class="row">
+        <div class="col-1-of-1">
+          <div class="form-container">
+            <h2 class="u-margin-bottom-small">Send us your request and we will back soon to yo</h2>
+            <form action="#" class="form"> 
+              <div class="form-group">
+                <label for="name">First Name</label>   
+                <input type="text" id="name" name="name" class="form-controle" placeholder="Your name"> 
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>   
+                <input type="email" id="email" name="email" class="form-controle" placeholder="Your email address"> 
+              </div>
+              <div class="form-group">
+                <label for="Message">Message</label>
+                <textarea id="subject" name="subject" style="height:140px" class="form-controle" placeholder="Type your message"></textarea> 
+              </div>
+              <div class="form-group">  
+                <input type="submit" id="submit" name="submit" value="Send" class="form-controle btn"> 
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+
+</div>
+
+<script>
+  //data-bg-img
+  var allBgImg = $('[data-bg-img]')
+  var linearGradient = 'linear-gradient(red,blue)'
+	$(allBgImg).each(function(i, item){
+		var img = $(item).attr('data-bg-img')
+		$(this).css({
+			background:'url(' + img + ') center center / cover no-repeat,'+linearGradient+'no-repeat',
+			// backgroundPosition:'',
+			// backgroundSize:''
+		})
+		$(this).removeAttr('data-bg-img')
+		
+	})
+  
+</script>
+  

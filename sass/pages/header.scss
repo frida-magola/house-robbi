@@ -1,10 +1,15 @@
 .header{
-    height: 7rem;
+    height: 10rem;
     width: 100%;
     position: fixed;
     width: 100%;
     z-index: 20;
     transition: 650ms ease-in-out;
+
+    @include respond(tab-port){
+        // background-color: rgba($brown-rgba,.9);
+        height: 7rem;
+    }
     
 }
 
@@ -17,6 +22,7 @@
     @include respond(tab-land){
         display: block;
         margin-left: 1.5rem;
+        padding-top: 1rem;
     }
     @include respond(tab-port){
         margin-left: 1.3rem;
@@ -25,32 +31,34 @@
         display: block;
         margin-left: 1.2rem;
     }
+    @include respond(sm-phone){
+        padding-top: 1.8rem;
+    }
 }
 
 .menu-toggle{
     position: relative;
+
     .open-toogle{
         float: right;
         display: none;
         cursor: pointer;
         transition: all .3s  ease-in-out;
         
+        @include respond(big-desk){
+            display: none;
+        }
         @include respond(tab-land){
-            display: block;
-            transform: translateX(-1.2rem);
+            display: none;
         }
 
         @include respond(tab-port){
             display: block;
-            transform: translateX(-1.2rem);
-        }
-        @include respond(phone){
-            display: block;
-            transform: translateX(-1.2rem);
+            transform: translate(-1.2rem,1rem);
         }
 
         i{
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: $white;
             cursor: pointer;
 
@@ -59,23 +67,66 @@
     .close-toogle{
         position: absolute;
         left: 90%;
-        top: 0;
+        top: 1%;
         display: none;
-        // transform: translateX(-1.2rem);
         transition: all .3s  ease-in-out;
         cursor: pointer;
+        transform: translate(-1rem,1rem);
 
         @include respond(tab-land){
             left: 96%; 
+            display: none;
         }
         @include respond(tab-port){
             left: 87%; 
         }
 
         i{
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: $white;
             cursor: pointer;
+
+        }
+    }
+}
+
+.nav-list-mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($brown-rgba,.9);
+    width: 100%;
+    height: 70vh !important;
+    transition: all 650ms ease-in-out;
+    padding-top: 9rem;
+    margin-right: 0rem;
+
+    @include respond(tab-land){
+        display: none;
+    }
+
+    &__items{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__link{
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1.5rem;
+        transition: all .3s ease;
+
+        &:last-child{
+            margin-right: 1rem;
+        }
+
+        &:hover,
+        &:focus,
+        &.active{
+            background: $white;
+            border-radius: .3rem;
+            color: $black;
         }
     }
 }
@@ -87,42 +138,23 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-top: 2rem;
+    padding-top: 3rem;
     position: relative;
     margin-right: 3.5rem;
     transition: all 650ms ease-in-out;
 
     @include respond(tab-land){
-        display: none;
-        width: 100%;
-        height: 70vh !important;
-        margin-right: 0rem;
-        background-color: rgba($brown-rgba,.9);
+        top:-9rem;
+        margin-right: 2rem;
     }
-
     @include respond(tab-port){
-        margin-right: 0rem; 
         display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba($brown-rgba,.9);
-        width: 100%;
-        height: 70vh !important;
-        transition: all 650ms ease-in-out;
-        padding-top: -1rem;
-
     }
 
     &__items{
         // padding: 1.5rem;
         @include respond(tab-land){
-            text-align: center;
-            padding: 2.3rem;
-        }
-        @include respond(tab-port){
-            text-align: center;
-            padding: 2rem;
+            padding-top: 9rem;
         }
     }
     &__link{

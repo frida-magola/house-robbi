@@ -1,27 +1,39 @@
 .portfolio-section{
+
     &_heading{
         font-size: 2.7rem;
         text-align: center;
         @include respond(tab-port){
-            font-size: 2rem;
-            text-align: justify;
+            font-size: 1.7rem;
+            padding-bottom: .5rem;
+            text-align: left;
         }
+
     }
+
     &__main{
         padding: 5%;
-        /* flex: 1 1 80%; */
         min-height: 100vh;
         padding-bottom: 0;
         padding-top: 0;
 
+        @include respond(tab-land){
+            min-height: 60vh;
+        }
+
+        @include respond(tab-port){
+            padding: 0; 
+        }
+
         @include respond(phone){
+            padding: 0;
             min-height: 36vh;
             padding-right: 8%;
         }
 
         @include respond(sm-phone){
-            padding-right: 8%;
-            margin-left: -2rem;
+            padding-right: 4%;
+            margin-left: 0rem;
         }
 
         .portfolio{
@@ -167,40 +179,49 @@
         }
     }
 }
+
 .house-section{
     &:not(:last-child){
         margin-bottom: 4rem !important;
     }
     .house-development{
         &__container{
-               /* height: 20rem; */
-                /* max-height: 20rem; */
                 width: 100%;
                 position: relative;
                 padding: 5rem;
                 padding-bottom: 0;
                 padding-top: 0;
 
-                // @include respond(sm-phone){
-                //     padding: 0rem;
-                //     width: 90%;
-                // }
+                @include respond(tab-port){
+                    padding: 0rem;
+                }
 
                 @include respond(phone){
                     padding: 0rem;
-                    width: 90%;
+                    width: 100%;
                 }
 
                 h1{
                     text-align: justify;
-
+                    @include respond(tab-port){
+                        font-size: 1.3rem;
+                    }
                 }
 
             .house-carousel{
                
                 &__item{
                     overflow: hidden;
-                    height: 20rem;
+                    height: auto;
+
+                    @include respond(tab-land){
+                        height: 7rem;
+                    }
+
+                    @include respond(tab-port){
+                        height: 10rem;
+                    }
+
                     &:not(:last-child){
                         margin-right: 0.5rem;
                     }

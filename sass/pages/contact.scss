@@ -106,8 +106,12 @@
     padding: 1.5rem;
     height: 85vh;
 
+    @include respond(tab-land){
+        height: 45vh;
+    }
+
     @include respond(tab-port){
-        height: 95vh;
+        height: 45vh;
     }
 
     &::after{
@@ -124,18 +128,26 @@
 }
 .form-container{
     width: 80%;
-    margin: 0 27rem;
+    margin: 0 20rem;
     z-index: 99999;
     position: absolute;
     height: 100%;
 
+    @include respond(tab-land){
+        margin: 0 10rem;
+    }
+
     @include respond(tab-port){
-        margin: 0 auto;
-        width: 100%;
+        margin: 0 -2rem;
+        width: 76%;
     }
     @include respond(phone){
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
+    }
+
+    @include respond(sm-phone){
+        width: 70%;
     }
     h2{
         font-size: 1.5rem;
@@ -147,19 +159,22 @@
     position: relative;
 
     &__content{
-        height: 25rem;
         background-color: $white-dark-lighter;
         font-size: 1.3rem;
         position: relative;
 
-        @include respond(tab-port){
-            width: 93%;
+        p{
+            padding: 1rem;
+            text-align: center;
         }
 
         figure{
            position: relative;
-           height: 60%;
            width: inherit;
+
+           figcaption{
+               position: relative;
+           }
            
            figcaption h2{
             width: 90%;
@@ -167,13 +182,18 @@
             color: $white;
             font-size: 1.5rem;
             position: absolute;
-            left: 1rem;
-            top: 12rem;
-            transform: translate(0rem, .5rem);
+            left: 6%;
+            top: 100%;
+            transform: translate(0rem, -5rem);
             padding: 1rem;
             z-index: 9999;
             box-shadow: 0 -1.000001rem 0.198rem 0 rgba($brown,.9);
             text-align: center;
+
+                @include respond(tab-port){
+                    transform: translate(0rem, -5rem);
+                    padding: .5rem;
+                }
            }
 
            figcaption p{
@@ -181,6 +201,10 @@
                padding-top: 2rem;
                text-align: center;
                font-size: 1.3rem;
+
+               @include respond(tab-port){
+                padding-top: 0rem;
+               }
            }
         }
 

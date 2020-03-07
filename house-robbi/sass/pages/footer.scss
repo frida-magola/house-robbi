@@ -1,0 +1,204 @@
+footer{
+    background-color: $white-dark-lighter;
+
+}
+
+.footer-aboutus{
+    width: 70%;
+    text-align: justify;
+    position: relative;
+    line-height: 2;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+
+    @include respond(tab-land){
+        width: 100%;
+    }
+
+    @include respond(tab-port){
+        width: 100%; 
+    }
+
+    h2{
+        color: $brown-rgba;
+        &::after{
+            position: absolute;
+            left: 0;
+            top: 2.1rem;
+            content: "";
+            width: 3rem;
+            border: 2.5px solid #000;
+
+        }
+    }
+
+    a{
+        padding: 1rem;
+        background-color: rgba($brown-rgba,.4);
+        box-shadow: 8px 16px 32px 10px rgba(252,253,225,.4);
+        transition: .3s ease;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+
+        &:hover{
+            color: $white;
+        }
+
+    }
+}
+
+.footer-logo{
+    width: 60%;
+    transform: translateY(5rem);
+
+    @include respond(tab-land){
+        width: 100%;
+    }
+
+    @include respond(tab-port){
+        width: 100%; 
+        transform: translateY(1.5rem);
+    }
+
+}
+.footer-newsletter{
+    padding-top: 2rem;
+    
+    &__form{
+
+        text-align: justify;
+
+        @include respond(tab-port){
+            text-align: left; 
+        }
+
+        label{
+
+            color: $brown-rgba;
+            font-size: 1.7rem;
+            position: relative;
+            padding: 1.5rem;
+            padding-left: 0;
+
+            &::after{
+                position: absolute;
+                left: 0;
+                top: 1.3rem;
+                content: "";
+                width: 7rem;
+                border: 2.5px solid #000;
+
+            }
+        }
+        &_input{
+            border: .1rem solid rgba($brown-rgba,.4);
+
+           &:focus{
+                outline: none;
+                border: .1rem solid rgba($brown-rgba,.4);
+           }
+
+           ::-webkit-input-placeholder{
+               color: #ccc;
+           }
+            
+        }
+        input{
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+
+            @include respond(tab-land){
+                width: 100%;
+            }
+
+            @include respond(tab-port){
+                width: 100%;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    
+}
+.designBy{
+    background-color:$brown-rgba;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+
+    &__content{
+
+        a{
+            color: $white;
+            padding-left: .5rem;
+
+            &:hover{
+                text-decoration: underline;
+                font-style: italic;
+                transition: font-size .3s ease-in-out;
+            }
+        }
+    }
+}
+.copyright{
+    font-size: 1.5rem;
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: $white;
+
+    &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        content: "";
+        border-top: 6px solid $black;
+    }
+
+    span{
+        a{
+            @include respond(tab-port){
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .footer-nav{
+        &__list{
+            float: right;
+            @include respond(tab-port){
+                float: left;
+            }
+            &_item{
+                display: inline-block;
+
+                &--link{
+                    padding: .8rem 1.5rem;
+                    font-size: 1rem;
+
+                    @include respond(tab-port){
+                        font-size: 1rem;
+                    }
+    
+                    &:hover{
+                        background-color: $white-dark-lighter;
+                        transform: scale(-1);
+                    
+                    }
+                    &:focus{
+                        background-color: $brown-rgba;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,252 @@
+.portfolio-section{
+    &_heading{
+        font-size: 2.7rem;
+        text-align: center;
+        @include respond(tab-port){
+            font-size: 2rem;
+            text-align: justify;
+        }
+    }
+    &__main{
+        padding: 5%;
+        /* flex: 1 1 80%; */
+        min-height: 100vh;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        @include respond(phone){
+            min-height: 36vh;
+            padding-right: 8%;
+        }
+
+        @include respond(sm-phone){
+            padding-right: 8%;
+            margin-left: -2rem;
+        }
+
+        .portfolio{
+            display: grid;
+            height: 100%;
+            grid-template-columns: repeat(5,1fr);
+            grid-auto-rows: repeat(6,1fr);
+            grid-gap: 2rem;
+
+            @include respond(phone){
+                grid-gap: 1rem;
+            }
+        }
+
+        .portfolio-item{
+            display: flex;
+            // background: $brown;
+            font-weight: 400;
+            justify-content: center;
+            align-items: center;
+
+            .animate{
+                height: 100%;
+                width: 100%;
+                color: $white;
+                position: relative;
+                transition: all 300ms ease-out;
+                overflow: hidden;
+                z-index: 1;
+                transition: all 0.3s ease;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.5s ease;
+                }
+
+                &::before{
+                    content: "";
+                    background: rgba(0,0,0,0.7);
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    transition: all 0.5s ease;
+                }
+                &:hover:before{ opacity: 1; }
+
+                &__heading{
+                    position: absolute;
+                    width: 100%;
+                    color: $white;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    background: rgba(0,0,0,0.7);
+                }
+
+                &__content{
+                    color: $white;
+                    width: 65%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 44%;
+                    left: 50%;
+                    z-index: 1;
+                    transition: all 0.3s ease 0.1s;
+
+                    &.medium-1{
+                        transform: translateY(-15%) translateX(-70%);
+                    }
+                    &.large{
+                        transform: translateY(70%) translateX(-70%);
+                    }
+
+                    &.medium-2{
+                        transform: translateY(-40%) translateX(-70%);
+                    }
+                      
+                    &.small{
+                        transform: translateY(-5%) translateX(-70%);
+                    }
+                    
+                    &.tall{
+                        transform: translateY(50%) translateX(-70%);
+                    }
+                  
+
+                    &.wide{
+                        transform: translateY(50%) translateX(-70%);
+                    }
+
+                    h3{
+                        font-size: 1.6;
+                    } 
+                    p{
+                        font-size: 1.2rem;
+                        padding-bottom: 1rem;
+                    }
+                    .btn-gallery{
+                        padding: 0.5rem 1.2rem;
+                        background: $brown;
+                        margin-top: .5rem;
+                        color: $white;
+                        font-size: 1.3rem;
+                    }
+                }
+              
+            }
+
+            .animate:hover .animate__content{
+                opacity: 1;
+                filter: blur(0);
+            }
+
+            &.small{
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+
+            &.medium{
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+            &.large{
+                grid-row: span 3;
+                grid-column: span 3;
+            }
+            // &.tall{
+            //     grid-row: 4 / span 3;
+            //     grid-column: 4 / span 2;
+            // }
+            &.tall{
+                grid-row: span 3;
+                grid-column: span 2;
+            }
+            &.wide{
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+        }
+    }
+}
+.house-section{
+    &:not(:last-child){
+        margin-bottom: 4rem !important;
+    }
+    .house-development{
+        &__container{
+               /* height: 20rem; */
+                /* max-height: 20rem; */
+                width: 100%;
+                position: relative;
+                padding: 5rem;
+                padding-bottom: 0;
+                padding-top: 0;
+
+                // @include respond(sm-phone){
+                //     padding: 0rem;
+                //     width: 90%;
+                // }
+
+                @include respond(phone){
+                    padding: 0rem;
+                    width: 100%;
+                }
+
+                h1{
+                    text-align: justify;
+
+                }
+
+            .house-carousel{
+               
+                &__item{
+                    overflow: hidden;
+                    height: 20rem;
+                    &:not(:last-child){
+                        margin-right: 0.5rem;
+                    }
+
+                    img{
+                        transform: scale(1) translate(1);
+                        transition: .3s ease-in-out;
+
+                        &:hover{
+                            background-color:rgba(0,0,0,1);
+                            -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+                }
+            }
+          }
+
+    }
+}
+
+//custom slick carousel
+.slick-prev, .slick-next{
+    background: $white !important;
+}
+.slick-next {
+    /* right: -3px; */
+    // right: 10px !important;
+    // top: -2rem !important;
+    &::before{
+        font-size: 1.5rem !important;
+        color: $brown !important;
+    }
+}
+.slick-prev{
+    // top: -2rem !important;
+    // left:95% !important;
+    // transform: translateY(50%) !important;
+
+    &::before{
+        font-size: 1.5rem !important;
+        color: $brown !important;
+    }
+}
+
+
+
+
