@@ -9,6 +9,11 @@
         @include respond(tab-port){
             margin-bottom:$vertical-width-small;
         }
+
+        @include respond(phone){
+            margin-bottom: 3rem !important;
+        }
+
     }
 
     @include respond(tab-land){

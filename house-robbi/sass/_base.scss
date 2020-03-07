@@ -44,6 +44,12 @@ body,html{
 }
 .u-margin-bottom-big{
     margin-bottom: 6rem !important;
+    @include respond(tab-port){
+        margin-bottom: 2rem !important;
+    }
+    @include respond(sm-phone){
+        margin-bottom: 3rem !important;
+    }
 }
 .u-margin-bottom-medium{
     margin-bottom: 3rem !important;
@@ -56,7 +62,8 @@ body,html{
 }
  img{
      width: 100%;
-     height: 100%;
+     max-width: 100%;
+    height: auto;
  }
  a{
      text-decoration: none;

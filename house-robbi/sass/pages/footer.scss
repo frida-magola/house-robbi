@@ -57,7 +57,7 @@ footer{
     }
 
     @include respond(tab-port){
-        width: 100%; 
+        width: 60%;
         transform: translateY(1.5rem);
     }
 
@@ -80,6 +80,10 @@ footer{
             position: relative;
             padding: 1.5rem;
             padding-left: 0;
+
+            @include respond(tab-port){
+                font-size: 1.4rem;
+            }
 
             &::after{
                 position: absolute;

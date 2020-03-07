@@ -73,13 +73,11 @@
 
 .thatching-questions{
     h1{
-        // cursor: pointer;
         @extend .flipIn;
         font-size: 3.6rem;
         line-height: 42px;
         letter-spacing: 1px;
         font-weight: 100;
-        // text-transform: uppercase;
     } 
 }
 
@@ -247,17 +245,34 @@
     }
   
     .reality-gallery{
+        margin-top: -3rem;
       &__bottom{
         margin-bottom:0 !important;
       }
       &__content{
-        height: 40rem;
+        height: 35rem;
         margin-bottom: 2rem !important;
         box-shadow:0 0 2.5rem 1rem rgba($brown,.2) ;
         cursor: pointer;
+
+        @include respond(tab-land){
+            height: 32rem;
+            :not(:last-child){
+                margin-bottom: 0rem !important;
+            }
+        }
+        @include respond(tab-port){
+            height: 38rem;
+        }
+
         @include respond(phone){
-            width: 100%;
-          }
+            // width: 100%;
+            
+        }
+
+        @include respond(sm-phone){
+            height: 24rem;
+        }
   
         &:hover figure img{
            background-color:rgba(0,0,0,.7);
@@ -265,12 +280,11 @@
             transform: scale(1.1);
         }
         &:hover figure h1{
-          transform: translate(-31%, -124%) skew(0deg);
+          transform: translate(-31%, -100%) skew(0deg);
         }
         figure{
           position: relative;
           width:100%;
-          height: 65%;
           overflow: hidden;
   
            img {
@@ -279,7 +293,6 @@
           }
   
           figcaption{
-           padding:1.5rem;
            position: relative;
            
   
@@ -287,7 +300,7 @@
               position: absolute;
               color:$white;
               background-color: rgba($black,.6);
-              transform: translate(-31%, -124%) skew(-25deg);
+              transform: translate(-31%, -114%) skew(-25deg);
               width:80%;
               z-index:999;
               padding:.7rem;
@@ -295,6 +308,15 @@
               left:36%;
               top:10%;
               transition:.3s ease-in-out ;
+
+            //   @include respond(tab-land){
+            //     transform: translate(-31%, -124%) skew(0deg);
+            //     font-size: 1.5rem;
+            //   }
+              @include respond(tab-port){
+                transform: translate(-31%, -124%) skew(0deg);
+                font-size: 1.5rem;
+              }
            }
            
           }
@@ -302,6 +324,23 @@
          p{
            font-size:1.5rem;
            padding: 1.5rem;
+           padding-top: .5rem;
+
+           @include respond(tab-land){
+            font-size:1.7rem;
+            padding: .8rem;
+            text-align: left;
+           }
+
+           @include respond(tab-port){
+                font-size:1.7rem;
+               padding-top: .5rem;
+               text-align: left;
+           }
+
+           @include respond(sm-phone){
+            font-size: 1.3rem;
+           }
          }      
   
       }
