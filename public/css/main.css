@@ -3357,7 +3357,7 @@ h1 {
 }
 @media only screen and (max-width: 56.25em) {
   .contact-map-form {
-    height: 45vh;
+    height: 80vh;
   }
 }
 .contact-map-form::after {
@@ -3392,7 +3392,7 @@ h1 {
 @media only screen and (max-width: 37.5em) {
   .form-container {
     margin: 0 auto;
-    width: 100%;
+    width: 75%;
   }
 }
 @media only screen and (max-width: 30em) {

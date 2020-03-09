@@ -1,0 +1,17 @@
+{
+  "name": "propeties",
+  "version": "1.0.0",
+  "description": "propaties",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss public/css/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "sass": "^1.26.1"
+  }
+}
